@@ -1,0 +1,31 @@
+
+POST http://localhost:3001/register_client
+Content-Type: application/json
+
+{
+  "name": "oauth2-client",
+  "redirect_uri": "http://localhost:3001/callback"
+}
+
+###
+
+POST http://localhost:3001/register_user
+Content-Type: application/json
+
+{
+  "email": "andrewchuhlomin@gmail.com",
+  "password": "12345",
+  "clients": "3d56c7b1-e4dd-4e90-92bb-5bad3ec8434f"
+}
+
+###
+
+GET http://localhost:3001/server_value
+Authorization: Bearer 923fa968-250f-49cc-af61-049424a0e605
+
+###
+
+GET http://localhost:3001/userinfo
+Authorization: Bearer d6618344-7cc1-4bc3-a366-89b6a110e4b9
+
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <% if (typeof redirect !== 'undefined') { %>
+        <script>
+            const redirect = decodeURIComponent("<%= redirect %>");
+
+            window.opener.location = redirect;
+            window.opener.focus();
+            window.close();
+        </script>
+    <% } %>
+</head>
+<body>
+<h1>Authorization Server</h1>
+<small>Warning! You do ONLY Authorization Server authentication here.</small>
+<small>Unless you delegate Client authentication to Authorization Server by OpenId Connect extension.</small>
+<br/>
+<div>Login to provide access:</div>
+<% if (typeof name !== 'undefined') { %>
+    <div>Name: <%= name %></div>
+<% } %>
+<% if (typeof scope !== 'undefined') { %>
+    <div>Scope: <%= scope %></div>
+<% } %>
+<br/>
+<form method='POST' action='/login'>
+    <label for="email">Email</label>
+    <input type='text' id='email' name='email' value='andrewchuhlomin@gmail.com' placeholder='@'>
+    <label for="password">Password</label>
+    <input type='password' id='password' name='password' value='12345'>
+    <input type="submit" value="Log in (authentication at Authorization Server)">
+</form>
+</body>
+</html>
