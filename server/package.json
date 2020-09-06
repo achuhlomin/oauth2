@@ -3,7 +3,8 @@
   "license": "UNLICENSE",
   "type": "module",
   "scripts": {
-    "start": "node -r dotenv/config bin/start.js"
+    "start": "node -r dotenv/config bin/start.js",
+    "test": "echo 'Warning!: No test specified' && exit 0"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
