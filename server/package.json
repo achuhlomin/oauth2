@@ -4,7 +4,8 @@
   "type": "module",
   "scripts": {
     "start": "node -r dotenv/config bin/start.js",
-    "test": "echo 'Warning!: No test specified' && exit 0"
+    "test": "echo 'Warning!: No test script specified' && exit 0",
+    "build": "echo 'Warning!: No build script specified' && exit 0"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
