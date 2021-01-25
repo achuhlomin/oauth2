@@ -1,6 +1,6 @@
 # Jetbrains
 .idea/
 
-# Nodejs
+# npm
 node_modules/
 .env
